@@ -1,0 +1,60 @@
+Test files for function ''add_integer(a, b=98)''
+==========================================
+from 0-add_integer import add_integer
+==========================================
+
+>>> add_integer =  __import__('0-add_integer').add_integer
+
+(1) Test with positive numbers
+>>> add_integer(2, 5)
+7
+
+(2) Test with positive and negative numbers
+>>> add_integer(-4, 10)
+6
+
+(3) Test with negative numbers
+>>> add_integer(-3, -7)
+-10
+
+(4) Test by giving only one parameter 'a'
+>>> add_integer(2)
+100
+
+(5) Test with float number and an integer
+>>> add_integer(4.98, 6)
+10
+
+(6) Test with all float numbers
+>>> add_integer(3.7, 7.89)
+10
+
+(7) Test with an integer and a string
+>>> add_integer('str', 5)
+Traceback (most recent call last):
+	...
+TypeError: a must be an integer
+
+(8) Test with parameter b as a string
+>>> add_integer(5, 'str')
+Traceback (most recent call last):
+	...
+TypeError: b must be an integer
+
+(9) Test with any other data type apart from float and int
+>>> add_integer([1, 2, 3], 6)
+Traceback (most recent call last):
+	...
+TypeError: a must be an integer
+
+(10) Test with float NaN
+>>> add_integer(float('nan'))
+Traceback (most recent call last):
+	...
+ValueError: cannot convert float NaN to integer
+
+(11) Test with float infinity
+>>> add_integer(float('inf'))
+Traceback (most recent call last):
+	...
+OverflowError: cannot convert float infinity to integer
