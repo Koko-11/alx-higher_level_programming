@@ -1,0 +1,29 @@
+This file has all the test cases for the function ''say_my_name''
+
+>>> say_my_name = __import__('3-say_my_name').say_my_name
+
+(1) Test case 1
+>>> say_my_name('Julius', 'Mwangi')
+My name is Julius Mwangi
+
+(2) Test case 2
+>>> say_my_name('Julius')
+My name is Julius 
+
+(3) Test case 3
+>>> say_my_name(2)
+Traceback (most recent call last):
+	...
+TypeError: first_name must be a string
+
+(4) Test case 4
+>>> say_my_name('Julius', ["str"])
+Traceback (most recent call last):
+	...
+TypeError: last_name must be a string
+
+(5) Test case 4
+>>> say_my_name()
+Traceback (most recent call last):
+	...
+TypeError: say_my_name() missing 1 required positional argument: 'first_name'
